@@ -14,7 +14,7 @@ st.subheader("Ask me anything — I'll think and answer")
 st.markdown("---")
 
 # Initialize Groq client
-client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+client = Groq(api_key=st.secretsclient = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # Chat history
 if "messages" not in st.session_state:
